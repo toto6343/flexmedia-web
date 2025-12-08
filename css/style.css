@@ -1,0 +1,562 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;400;700&family=Poppins:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+    display: flex;
+    position: relative;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 188, 212, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+    animation: backgroundShift 15s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+main header {
+    width: 20%;
+    height: 100vh;
+    padding: 10vh 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main header h1 {
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+main header h1 i {
+    font-size: 5vw;
+    margin-bottom: 15px;
+    color: #00796b;
+    display: block;
+    animation: wave 3s ease-in-out infinite;
+    text-shadow: 2px 2px 10px rgba(0, 121, 107, 0.3);
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+main header h1 span {
+    font: normal 1vw/1.4 "Poppins", sans-serif;
+    color: #00796b;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+main header address {
+    font: normal 11px/1.6 "arial";
+    color: #666;
+    text-align: center;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main nav {
+    position: fixed;
+    top: 10vh;
+    right: 5vw;
+    z-index: 3;
+    animation: fadeInRight 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main nav ul {
+    display: flex;
+}
+
+main nav ul li {
+    margin-left: 20px;
+}
+
+main nav ul li a {
+    font-size: 20px;
+    color: #00796b;
+    transition: all 0.3s;
+    display: block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+main nav ul li a:hover {
+    color: #fff;
+    background: #ffab40;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 20px rgba(255, 171, 64, 0.4);
+}
+
+main section {
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100vh;
+    padding-top: 15vh;
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+main section article {
+    flex: 1;
+    padding: 70px 40px 100px;
+    position: relative;
+    opacity: 0.85;
+    z-index: 1;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 0 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.8s ease-out both;
+}
+
+main section article:nth-child(1) { animation-delay: 0.1s; }
+main section article:nth-child(2) { animation-delay: 0.2s; }
+main section article:nth-child(3) { animation-delay: 0.3s; }
+main section article:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 0.85;
+        transform: translateY(0);
+    }
+}
+
+main section article::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(135deg, #4db6ac 0%, #26a69a 100%);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 15px;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+main section article .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    position: relative;
+}
+
+main section article .inner .txt {
+    width: 100%;
+    transition: 0.5s;
+}
+
+main section article .inner .txt h2 {
+    font: normal 2vw/1.2 "Alegreya Sans SC", sans-serif;
+    color: #00796b;
+    margin-bottom: 30px;
+    padding-top: 70px;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main section article .inner .txt h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffab40, #ff9800);
+    margin-top: 20px;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+}
+
+main section article .inner .txt p {
+    font: 14px/1.6 "Poppins", arial, sans-serif;
+    color: #555;
+    opacity: 0.9;
+    transition: all 0.5s;
+}
+
+main section article .inner figure {
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(135deg, #ffccbc, #ffab91);
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    filter: saturate(20%);
+    transform-origin: center;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 10px;
+    position: relative;
+}
+
+main section article .inner figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+main section article .inner figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+main section article:hover {
+    flex: 1.5;
+    opacity: 1;
+    z-index: 2;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+main section article:hover::before {
+    opacity: 0.95;
+}
+
+main section article:hover .inner .txt {
+    width: 75%;
+}
+
+main section article:hover .inner .txt h2 {
+    font-size: 4.5vw;
+    padding-top: 0;
+    color: #fff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+main section article:hover .inner .txt h2::after {
+    width: 120px;
+    background: linear-gradient(90deg, #fff, #ffab40);
+}
+
+main section article:hover .inner .txt p {
+    color: #fff;
+    opacity: 1;
+}
+
+main section article:hover .inner figure {
+    height: 28vh;
+    filter: saturate(130%);
+    transform: translateY(2vh) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+main section article:hover .inner figure::before {
+    transform: translateX(100%);
+}
+
+main section article:hover .inner figure video {
+    transform: scale(1.15);
+}
+
+main aside {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    z-index: 4;
+    padding: 20vh 7vw 14vh 25vw;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.2);
+}
+
+main aside::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(77, 182, 172, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 171, 64, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+main aside.on {
+    opacity: 1;
+    left: 0;
+}
+
+main aside .txt {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main aside .txt h1 {
+    font: normal 5vw/1.2 "Alegreya Sans SC", sans-serif;
+    color: #00796b;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 10px rgba(0, 121, 107, 0.2);
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+main aside .txt p {
+    font: 1.1vw/1.6 "Poppins", arial, sans-serif;
+    color: #555;
+    margin-bottom: 60px;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+main aside .txt span {
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #ffab40, #ff9800);
+    padding: 15px 40px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 171, 64, 0.3);
+    animation: fadeIn 1s ease-out 0.7s both;
+}
+
+main aside .txt span:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 25px rgba(255, 171, 64, 0.5);
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+main aside .txt span:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+main aside figure {
+    width: 65%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main aside figure::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+main aside figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 로딩 애니메이션 */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(0, 121, 107, 0.2);
+    border-top: 4px solid #00796b;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    main header {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 5vh 5vw;
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    main nav {
+        position: absolute;
+        top: 5vh;
+        right: 5vw;
+    }
+
+    main section {
+        width: 100%;
+        margin-left: 0;
+        flex-wrap: wrap;
+        padding-top: 5vh;
+    }
+
+    main section article {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main aside {
+        padding: 10vh 5vw;
+        flex-direction: column;
+    }
+
+    main aside .txt,
+    main aside figure {
+        width: 100%;
+    }
+
+    main aside .txt {
+        margin-bottom: 30px;
+    }
+}
