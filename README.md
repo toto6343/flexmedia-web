@@ -86,8 +86,8 @@
 ### 1. 저장소 클론
 
 ```bash
-git clone https://github.com/yourusername/surfing-gallery.git
-cd surfing-gallery
+git clone https://github.com/toto6343/flexmedia-web.git
+cd flexmedia-web
 ```
 
 ### 2. 파일 구조 확인
