@@ -7,16 +7,39 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
+## 📸 스크린샷
+
+### 메인 화면
+<img width="1900" height="1080" alt="메인 갤러리 화면" src="https://github.com/user-attachments/assets/526a6668-b525-4b8d-bf0b-6886ab0f2a3a" />
+
+### 갤러리 카드
+<img width="1900" height="1080" alt="갤러리 카드 뷰" src="https://github.com/user-attachments/assets/ae8ba1a4-98a9-4737-993c-3e208d4fab4a" />
+
+### 호버 효과
+<img width="1899" height="1080" alt="카드 호버 효과" src="https://github.com/user-attachments/assets/26b4cc36-0fc4-4c42-8ad7-baee878da77c" />
+
+### 상세 팝업
+<img width="1899" height="1080" alt="상세 팝업 화면 1" src="https://github.com/user-attachments/assets/c688bca1-e71e-45c1-a097-c8e44504a3ae" />
+<img width="1899" height="1080" alt="상세 팝업 화면 2" src="https://github.com/user-attachments/assets/451a46b7-0c67-4387-acba-42909d7ee9fd" />
+
+### 인터랙션
+<img width="1901" height="1080" alt="비디오 재생" src="https://github.com/user-attachments/assets/1a2c3ec5-9118-4f7a-828d-55ebba36a256" />
+<img width="1887" height="1080" alt="글래스모피즘 효과" src="https://github.com/user-attachments/assets/d60dc1a5-7f90-403b-a557-92b8b2bcff52" />
+
+### 반응형 디자인
+<img width="1895" height="1080" alt="반응형 레이아웃 1" src="https://github.com/user-attachments/assets/4e5a59ea-6115-4b0e-8e7c-94123ecdd11f" />
+<img width="1896" height="1080" alt="반응형 레이아웃 2" src="https://github.com/user-attachments/assets/9faad374-5f48-422f-8048-dae972ecea3e" />
+
 ## 📋 목차
 
-- [주요 기능](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5)
-- [기술 스택](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D)
-- [설치 방법](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95)
-- [파일 구조](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%ED%8C%8C%EC%9D%BC-%EA%B5%AC%EC%A1%B0)
-- [사용 방법](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95)
-- [커스터마이징](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95)
-- [브라우저 호환성](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%ED%98%B8%ED%99%98%EC%84%B1)
-- [라이선스](https://claude.ai/chat/a8bf976c-6002-4785-9b89-f6a42137e1e8#-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4)
+- [주요 기능](#-주요-기능)
+- [기술 스택](#-기술-스택)
+- [설치 방법](#-설치-방법)
+- [파일 구조](#-파일-구조)
+- [사용 방법](#-사용-방법)
+- [커스터마이징](#-커스터마이징)
+- [브라우저 호환성](#-브라우저-호환성)
+- [라이선스](#-라이선스)
 
 ## ✨ 주요 기능
 
@@ -44,19 +67,19 @@
 
 - **HTML5** : 시맨틱 마크업
 - **CSS3** :
-- Flexbox 레이아웃
-- CSS Grid
-- CSS 애니메이션 & 트랜지션
-- Backdrop-filter (글래스모피즘)
-- 미디어 쿼리 (반응형)
+  - Flexbox 레이아웃
+  - CSS Grid
+  - CSS 애니메이션 & 트랜지션
+  - Backdrop-filter (글래스모피즘)
+  - 미디어 쿼리 (반응형)
 - **JavaScript (ES6+)** :
-- DOM 조작
-- 이벤트 리스너
-- 비디오 API
+  - DOM 조작
+  - 이벤트 리스너
+  - 비디오 API
 - **Font Awesome** : 아이콘
 - **Google Fonts** :
-- Alegreya Sans SC
-- Poppins
+  - Alegreya Sans SC
+  - Poppins
 
 ## 📦 설치 방법
 
@@ -152,10 +175,9 @@ npx live-server
 1. **마우스 호버** : 각 갤러리 카드에 마우스를 올리면 비디오가 재생되고 카드가 확대됩니다
 2. **카드 클릭** : 카드를 클릭하면 전체 화면 팝업이 열립니다
 3. **팝업 닫기** :
-
-- "닫기" 버튼 클릭
-- ESC 키 누르기
-- 팝업 배경 클릭
+   - "닫기" 버튼 클릭
+   - ESC 키 누르기
+   - 팝업 배경 클릭
 
 ### 키보드 단축키
 
